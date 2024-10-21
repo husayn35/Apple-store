@@ -1,0 +1,73 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: var(--color);
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+}
+
+$font: Poppins;
+$color: #000;
+
+:root {
+  --bg-color: #fff;
+  --color: #000;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+
+body {
+  background-color: var(--bg-color);
+  font-family: $font;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1150px;
+  margin: 0 auto;
+}
+
+// main
+
+main {
+  margin-top: 73px;
+}
+
+// hero section
+
+#hero {
+  // background-color: #000;
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  .hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    img {
+      width: 450px;
+    }
+  }
+  h1 {
+    color: white;
+    font-size: 60px;
+    text-align: center;
+    // box-shadow: 0 0 20px;
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  .container {
+    width: 85%;
+  }
+}
+@import "header.scss";
+@import "iphone.scss";
