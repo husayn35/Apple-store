@@ -22,9 +22,9 @@ ul {
 }
 
 body {
-  background-color: var(--bg-color);
   font-family: Poppins;
   overflow-x: hidden;
+  background-color: red;
 }
 
 .container {
