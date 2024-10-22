@@ -253,4 +253,7 @@ main {
   .desktop-dark {
     display: none;
   }
+  .header-logo {
+    width: 30px;
+  }
 }/*# sourceMappingURL=style.css.map */
