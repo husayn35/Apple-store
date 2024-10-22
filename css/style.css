@@ -250,9 +250,6 @@ main {
   .mobile-menu {
     display: block;
   }
-  .desktop-dark {
-    display: none;
-  }
   .header-logo {
     width: 30px;
   }

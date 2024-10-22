@@ -14,17 +14,23 @@
   <body>
     <header>
       <div class="container header">
-        <a href="#">
-          <img src="../images/logo.svg" alt="apple " id="apple-light" />
+        <a href="../index.html">
+          <img
+            src="../images/logo.svg"
+            alt="apple "
+            id="apple-light"
+            class="header-logo"
+          />
           <img
             src="../images/apple-svgrepo-com.svg"
             alt="apple"
             id="apple-dark"
+            class="header-logo"
           />
         </a>
         <div class="nav">
           <ul>
-            <li><a href="pages/iphone.html">iPhone</a></li>
+            <li><a href="#">iPhone</a></li>
             <li><a href="#">iPad</a></li>
             <li><a href="#">MacBook</a></li>
             <li><a href="#">Watch</a></li>
@@ -35,10 +41,10 @@
 
         <div class="header-right">
           <a href="#" class="header-wallet">
-            <img src="../images/wallet.svg" alt="wallet" />
+            <img src="images/wallet.svg" alt="wallet" />
             Wallet
           </a>
-          <input type="checkbox" id="dark-mode" />
+          <input type="checkbox" id="dark-mode" class="desktop-dark" />
           <label for="header-menu" class="header-menu">&#9776;</label>
           <input type="checkbox" id="header-menu" />
           <div class="mobile-menu">
@@ -70,4 +76,5 @@
   <script src="../js/darkmode.js"></script>
   <script src="../js/head.js"></script>
   <script src="../js/logo-dark.js"></script>
+  <script src="../js/main.js"></script>
 </html>
