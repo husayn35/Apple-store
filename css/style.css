@@ -250,4 +250,7 @@ main {
   .mobile-menu {
     display: block;
   }
+  .desktop-dark {
+    display: none;
+  }
 }/*# sourceMappingURL=style.css.map */
