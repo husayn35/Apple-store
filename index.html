@@ -17,7 +17,8 @@
     <header>
       <div class="container header">
         <a href="#">
-          <img src="images/logo.svg" alt="apple" />
+          <img src="images/logo.svg" alt="apple " id="apple-light" />
+          <img src="images/apple-svgrepo-com.svg" alt="apple" id="apple-dark" />
         </a>
         <div class="nav">
           <ul>
@@ -30,22 +31,20 @@
           </ul>
         </div>
 
-        <a href="#" class="header-wallet">
-          <img src="images/wallet.svg" alt="wallet" />
-          Wallet
-        </a>
+        <div class="header-right">
+          <a href="#" class="header-wallet">
+            <img src="images/wallet.svg" alt="wallet" />
+            Wallet
+          </a>
+          <input type="checkbox" id="dark-mode" />
+          <label for="header-menu" class="header-menu">&#9776;</label>
+          <input type="checkbox" id="header-menu" />
+        </div>
       </div>
     </header>
-    <main>
-      <!-- <section id="hero"> -->
-        <!-- <div class="container hero"> -->
-          <!-- <img src="images/hero-logo.svg" alt="apple" /> -->
-          <!-- <h1>Store. The best way to buy the products you love.</h1> -->
-        <!-- </div>
-         -->
-
-         
-      </section>
-    </main>
+    <main></main>
+    <script src="js/darkmode.js"></script>
+    <script src="js/head.js"></script>
+    <script src="js/logo-dark.js"></script>
   </body>
 </html>

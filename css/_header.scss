@@ -7,10 +7,12 @@ header {
   padding: 15px 0;
   box-shadow: 0 0 8px gray;
   z-index: 1000;
-  background-color: white;
+  transition: all ease-in-out 0.3s;
+  background-color: var(--bg-color);
   a {
     img {
       width: 38px;
+      transition: none;
     }
   }
 }
@@ -54,4 +56,48 @@ header {
 
 .header-wallet:hover {
   transform: scale(1.1);
+}
+
+.header-right {
+  display: flex;
+  column-gap: 25px;
+  align-items: center;
+}
+#dark-mode {
+  appearance: none;
+  width: 60px;
+  height: 30px;
+  border-radius: 20px;
+  position: relative;
+  border: solid 2px black;
+  transition: all 0.3s;
+}
+#dark-mode::before {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  background-color: #000;
+  border-radius: 50%;
+  top: 1px;
+  left: 2px;
+  transition: all 0.3s;
+}
+#dark-mode:checked {
+  background-color: var(--color);
+  border-color: white;
+}
+
+#dark-mode:checked::before {
+  left: 30px;
+  background-color: var(--bg-color);
+}
+
+.header-menu {
+  font-size: 30px;
+  cursor: pointer;
+  display: none;
+}
+#header-menu {
+  display: none;
 }

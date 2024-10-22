@@ -27,6 +27,8 @@ body {
   font-family: $font;
   overflow-x: hidden;
   // background-color: red;
+  color: var(--color);
+  transition: all ease-in-out 0.3s;
 }
 
 .container {
@@ -65,10 +67,19 @@ main {
   }
 }
 
+@import "header.scss";
+@import "iphone.scss";
+
 @media screen and (max-width: 1250px) {
   .container {
     width: 85%;
   }
 }
-@import "header.scss";
-@import "iphone.scss";
+@media screen and (max-width: 970px) {
+  .nav {
+    display: none;
+  }
+  .header-menu {
+    display: block;
+  }
+}
