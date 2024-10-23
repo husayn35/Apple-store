@@ -12,17 +12,16 @@ body {
 }
 .hero {
   width: 100%;
-  height: 90dvh;
-  background-color: var(--bg-color);
+  height: 89vh;
+  // background-color: var(--bg-color);
   transition: all 0.3s;
+  background-image: url(../images/hero_alt__ey5khbzf04eq_xlarge.png);
+  background-size: 80vw;
+  background-position-x: center;
+  background-repeat: no-repeat;
+  background-position-y: -160px;
 }
-#myVideo {
-  width: 70vw;
-  height: auto;
-  margin: 0 auto;
-  display: block;
-  border-radius: 20px;
-}
+
 main {
   margin-top: 80px;
 }
