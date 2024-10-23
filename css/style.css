@@ -249,4 +249,7 @@ main {
   .header-logo {
     width: 30px;
   }
+  .hero {
+    background-position-y: -10px;
+  }
 }/*# sourceMappingURL=style.css.map */
