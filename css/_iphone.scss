@@ -25,3 +25,13 @@ body {
 main {
   margin-top: 80px;
 }
+
+
+// iPhone models
+
+.iphone-models  {|
+  ul {
+    display: flex;
+    justify-content: space-between;
+  }
+}
