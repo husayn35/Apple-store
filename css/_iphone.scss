@@ -26,12 +26,48 @@ main {
   margin-top: 80px;
 }
 
-
 // iPhone modelsgi
 
-.iphone-models  {
+.iphone-models {
+  margin-bottom: 30px;
+  h2 {
+    font-size: 50px;
+  }
   ul {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
+    column-gap: 50px;
+    row-gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    li {
+      a {
+        font-weight: 500;
+        background-color: var(--color);
+        color: var(--bg-color);
+        padding: 5px 10px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px gray;
+      }
+    }
+  }
+}
+.iphone-cards {
+  margin-top: 40px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgb(205, 205, 205);
+  width: 350px;
+  text-align: center;
+  padding: 40px;
+  .card {
+    img {
+      width: 300px;
+      height: 300px;
+      object-fit: cover;
+    }
+    h4 {
+      text-align: left;
+      font-weight: 500;
+    }
   }
 }
