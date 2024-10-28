@@ -54,20 +54,54 @@ main {
 }
 .iphone-cards {
   margin-top: 40px;
-  border-radius: 20px;
-  box-shadow: 0 0 10px rgb(205, 205, 205);
-  width: 350px;
   text-align: center;
   padding: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: 20px;
   .card {
+    width: 250px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgb(205, 205, 205);
     img {
-      width: 300px;
+      width: 250px;
       height: 300px;
       object-fit: cover;
+      border-radius: 20px;
     }
     h4 {
       text-align: left;
       font-weight: 500;
+    }
+    .card-body {
+      padding: 10px 15px;
+      display: flex;
+      flex-direction: column;
+      row-gap: 10px;
+      .colors {
+        display: flex;
+        column-gap: 10px;
+        align-items: center;
+        div {
+          width: 15px;
+          height: 15px;
+          border-radius: 7px;
+          border: solid 1px gray;
+        }
+        .gold {
+          background-color: #c3a995;
+        }
+        .silver {
+          background-color: #c9c3bb;
+        }
+        .white {
+          background-color: #f2f1ed;
+        }
+        .black {
+          background-color: #444445;
+        }
+      }
     }
   }
 }

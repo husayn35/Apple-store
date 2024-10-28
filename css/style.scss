@@ -93,3 +93,27 @@ main {
     background-position-y: -10px;
   }
 }
+
+@media screen and (max-width: 675px) {
+  .hero {
+    height: 30vh;
+  }
+  .iphone-models {
+    h2 {
+      font-size: 28px;
+    }
+  }
+  ul {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    li {
+      a {
+        font-size: 12px;
+      }
+    }
+  }
+}
+.iphone-cards {
+  row-gap: 30px;
+}

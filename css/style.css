@@ -257,21 +257,58 @@ main {
 
 .iphone-cards {
   margin-top: 40px;
-  border-radius: 20px;
-  box-shadow: 0 0 10px rgb(205, 205, 205);
-  width: 350px;
   text-align: center;
   padding: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: 20px;
+}
+.iphone-cards .card {
+  width: 250px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgb(205, 205, 205);
 }
 .iphone-cards .card img {
-  width: 300px;
+  width: 250px;
   height: 300px;
   -o-object-fit: cover;
      object-fit: cover;
+  border-radius: 20px;
 }
 .iphone-cards .card h4 {
   text-align: left;
   font-weight: 500;
+}
+.iphone-cards .card .card-body {
+  padding: 10px 15px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+.iphone-cards .card .card-body .colors {
+  display: flex;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+  align-items: center;
+}
+.iphone-cards .card .card-body .colors div {
+  width: 15px;
+  height: 15px;
+  border-radius: 7px;
+  border: solid 1px gray;
+}
+.iphone-cards .card .card-body .colors .gold {
+  background-color: #c3a995;
+}
+.iphone-cards .card .card-body .colors .silver {
+  background-color: #c9c3bb;
+}
+.iphone-cards .card .card-body .colors .white {
+  background-color: #f2f1ed;
+}
+.iphone-cards .card .card-body .colors .black {
+  background-color: #444445;
 }
 
 @media screen and (max-width: 1250px) {
@@ -295,4 +332,23 @@ main {
   .hero {
     background-position-y: -10px;
   }
+}
+@media screen and (max-width: 675px) {
+  .hero {
+    height: 30vh;
+  }
+  .iphone-models h2 {
+    font-size: 28px;
+  }
+  ul {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+  ul li a {
+    font-size: 12px;
+  }
+}
+.iphone-cards {
+  row-gap: 30px;
 }/*# sourceMappingURL=style.css.map */
