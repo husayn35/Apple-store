@@ -5,14 +5,14 @@ async function checkForUpdates() {
     );
     const data = await response.json();
 
-    console.log("GitHub API Response:", data); // So'rov javobini ko'rish
+    console.log("GitHub API Response:", data);
 
     const lastUpdate = localStorage.getItem("lastUpdate");
     const newUpdate = data[0].sha;
     const commitMessage = data[0].commit.message;
 
-    console.log("Old Update SHA:", lastUpdate); // Avvalgi commit ID
-    console.log("New Update SHA:", newUpdate); // Yangi commit ID
+    console.log("Old Update SHA:", lastUpdate);
+    console.log("New Update SHA:", newUpdate);
 
     if (lastUpdate !== newUpdate) {
       alert(commitMessage);
