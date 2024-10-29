@@ -15,7 +15,7 @@ async function checkForUpdates() {
     console.log("New Update SHA:", newUpdate); // Yangi commit ID
 
     if (lastUpdate !== newUpdate) {
-      alert("Yangi yangilanish mavjud: " + commitMessage);
+      alert(commitMessage);
       localStorage.setItem("lastUpdate", newUpdate);
     }
   } catch (error) {
