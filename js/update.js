@@ -1,7 +1,7 @@
 async function checkForUpdates() {
   try {
     const response = await fetch(
-      "https://api.github.com/repos/husayn/Apple-store/commits"
+      "https://api.github.com/repos/husayn35/Apple-store/commits"
     );
     const data = await response.json();
 
