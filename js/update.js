@@ -1,26 +1,34 @@
-async function checkForUpdates() {
-  try {
-    const response = await fetch(
-      "https://api.github.com/repos/husayn35/Apple-store/commits"
-    );
-    const data = await response.json();
+document.addEventListener("DOMContentLoaded", function () {
+  const images = document.querySelectorAll("img");
+  let loadedImages = 0;
 
-    console.log("GitHub API Response:", data);
+  // Sahifada ko'rinib turgan rasmlarni kuzatish uchun IntersectionObserver o'rnatamiz
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const img = entry.target;
 
-    const lastUpdate = localStorage.getItem("lastUpdate");
-    const newUpdate = data[0].sha;
-    const commitMessage = data[0].commit.message;
+        img.addEventListener("load", updateProgress);
+        img.addEventListener("error", updateProgress);
 
-    console.log("Old Update SHA:", lastUpdate);
-    console.log("New Update SHA:", newUpdate);
+        // Rasm yuklashni boshlash
+        img.src = img.getAttribute("data-src");
 
-    if (lastUpdate !== newUpdate) {
-      alert(commitMessage);
-      localStorage.setItem("lastUpdate", newUpdate);
+        observer.unobserve(img); // Rasm yuklanishni boshlagandan keyin kuzatishni to'xtatish
+      }
+    });
+  });
+
+  images.forEach((img) => {
+    img.setAttribute("data-src", img.src); // Asl rasm yo'lini saqlab qo'yamiz
+    img.src = ""; // Hozircha src ni bo'sh qilamiz
+    observer.observe(img); // Har bir rasmni kuzatamiz
+  });
+
+  function updateProgress() {
+    loadedImages++;
+    if (loadedImages === images.length) {
+      document.getElementById("loading-screen").style.display = "none";
     }
-  } catch (error) {
-    console.error("Yangilanishni tekshirishda xato:", error);
   }
-}
-
-document.addEventListener("DOMContentLoaded", checkForUpdates);
+});
