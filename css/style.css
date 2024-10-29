@@ -328,6 +328,12 @@ main {
   color: #3498db;
 }
 
+#loading-screen {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
 @keyframes spin {
   0% {
     transform: rotate(0deg);
