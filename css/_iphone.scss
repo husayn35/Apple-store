@@ -69,6 +69,8 @@ main {
       height: 300px;
       object-fit: cover;
       border-radius: 20px;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
     }
     h4 {
       text-align: left;

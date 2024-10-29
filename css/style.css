@@ -275,6 +275,8 @@ main {
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 20px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
 }
 .iphone-cards .card h4 {
   text-align: left;
