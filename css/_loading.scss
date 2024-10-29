@@ -6,6 +6,11 @@
   height: 40px;
   animation: spin 1s linear infinite;
 }
+.loading-text {
+  font-size: 70px;
+  text-align: center;
+  color: #3498db;
+}
 
 @keyframes spin {
   0% {
