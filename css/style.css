@@ -99,7 +99,7 @@ header a img {
 
 .header-wallet {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   background-color: black;
   padding: 7px 10px;
   color: white;
@@ -342,6 +342,106 @@ main {
     transform: rotate(360deg);
   }
 }
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: var(--bg-color);
+  color: var(--bg-color);
+}
+
+.chat-container {
+  width: 400px;
+  max-width: 90%;
+  background-color: var(--color);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  color: var(--color);
+}
+
+.messages {
+  height: 300px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  color: var(--bg-color);
+}
+
+.message {
+  margin: 5px 0;
+  color: var(--bg-color);
+}
+
+.user {
+  color: blue;
+}
+
+.bot {
+  color: green;
+}
+
+.info {
+  margin-top: 10px;
+}
+
+.message-inp {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#userInput {
+  color: var(--bg-color);
+  background-color: var(--color);
+  width: 80%;
+  border: none;
+  padding: 5px 20px;
+  border: 2px solid var(--bg-color);
+  border-radius: 20px;
+}
+
+#userInput:focus {
+  outline: none;
+  border: solid 2px var(--bg-color);
+}
+
+#sendButton {
+  color: var(--color);
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  transform: rotate(-90deg);
+  border: none;
+  background-color: var(--bg-color);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+#sendButton {
+  opacity: 0.6;
+  /* cursor: not-allowed; */
+}
+
 @media screen and (max-width: 1250px) {
   .container {
     width: 85%;

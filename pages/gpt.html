@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="eng">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chatbot - iPhone Ma'lumot</title>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container header">
+        <a href="../index.html">
+          <img
+            src="../images/logo.svg"
+            alt="apple "
+            id="apple-light"
+            class="header-logo"
+          />
+          <img
+            src="../images/apple-svgrepo-com.svg"
+            alt="apple"
+            id="apple-dark"
+            class="header-logo"
+          />
+        </a>
+        <div class="nav">
+          <ul>
+            <li><a href="../pages/iphone.html">iPhone</a></li>
+            <li><a href="#">iPad</a></li>
+            <li><a href="#">MacBook</a></li>
+            <li><a href="#">Watch</a></li>
+            <li><a href="#">Vision</a></li>
+            <li><a href="#">AirPods</a></li>
+            <li><a href="#">GPT</a></li>
+          </ul>
+        </div>
+
+        <div class="header-right">
+          <a href="#" class="header-wallet">
+            <img src="../images/wallet.svg" alt="wallet" />
+            Wallet
+          </a>
+          <input type="checkbox" id="dark-mode" class="desktop-dark" />
+          <label for="header-menu" class="header-menu">&#9776;</label>
+          <input type="checkbox" id="header-menu" />
+          <div class="mobile-menu">
+            <label for="header-menu">&#10005;</label>
+            <ul>
+              <li><a href="iphone.html">iPhone</a></li>
+              <li><a href="#">iPad</a></li>
+              <li><a href="#">MacBook</a></li>
+              <li><a href="#">Watch</a></li>
+              <li><a href="#">Vision</a></li>
+              <li><a href="#">AirPods</a></li>
+              <li><a href="#">GPT</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="chat-container">
+      <div class="messages" id="messages"></div>
+      <div class="message-inp">
+        <input type="text" id="userInput" placeholder="Savol yozing..." />
+        <button id="sendButton" onclick="sendMessage()" disabled>➤</button>
+      </div>
+    </div>
+
+    <script src="../js/gpt.js"></script>
+    <script src="../js/darkmode.js"></script>
+    <script src="../js/head.js"></script>
+    <script src="../js/logo-dark.js"></script>
+    <script src="../js/main.js"></script>
+  </body>
+</html>
