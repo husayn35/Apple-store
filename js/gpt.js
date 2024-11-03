@@ -7,6 +7,7 @@ function sendMessage() {
   userMessage.textContent = userInput;
   messages.appendChild(userMessage);
 
+  // Foydalanuvchi xabari qo'shilganda avtomatik siljish
   messages.scrollTop = messages.scrollHeight;
 
   document.getElementById("userInput").value = "";
@@ -20,11 +21,12 @@ function sendMessage() {
       botMessage.textContent = response.text;
       messages.appendChild(botMessage);
 
+      // Rasm bo'lsa, uni qo'shish
       if (response.image) {
         const img = document.createElement("img");
         img.src = response.image;
         img.alt = "Rasm";
-        img.style.width = "100%"; // Rasmning kengligini 100% qilib qo'yamiz
+        img.style.width = "100%";
         botMessage.appendChild(img);
       }
 
@@ -35,6 +37,7 @@ function sendMessage() {
       animateTyping(botMessage);
     }
 
+    // Output malumot qo'shilganda avtomatik siljish
     messages.scrollTop = messages.scrollHeight;
   }, 1000);
 }
