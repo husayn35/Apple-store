@@ -9,13 +9,14 @@ body {
   color: var(--bg-color);
 }
 .chat-container {
-  width: 400px;
+  width: 100%;
   max-width: 90%;
   background-color: var(--color);
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   color: var(--color);
+  max-height: 80;
 }
 .messages {
   height: 300px;

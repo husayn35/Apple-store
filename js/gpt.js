@@ -37,8 +37,7 @@ function getInformation(input) {
   if (input.includes("iphone 16")) {
     return {
       text: "iPhone 16 - Apple tomonidan chiqarilgan eng yangi smartfon. Ushbu telefon yuqori darajadagi texnologiyalar, kuchli kameralar va ilg'or ishlash quvvatiga ega.",
-      image:
-        "https://upload.wikimedia.org/wikipedia/commons/1/1c/IPhone_16_%28mockup%29.jpg",
+      image: "../images/16pro.webp",
     };
   }
   return null;
