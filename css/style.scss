@@ -97,6 +97,9 @@ main {
   .loading-text {
     font-size: 48px;
   }
+  .send-message {
+    width: 80%;
+  }
 }
 
 @media screen and (max-width: 675px) {
@@ -123,5 +126,8 @@ main {
   }
   .loading-text {
     font-size: 28px;
+  }
+  .send-message {
+    width: 90%;
   }
 }
