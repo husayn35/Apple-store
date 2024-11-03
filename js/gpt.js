@@ -7,7 +7,6 @@ function sendMessage() {
   userMessage.textContent = userInput;
   messages.appendChild(userMessage);
 
-  // Foydalanuvchi xabari qo'shilganda avtomatik siljish
   messages.scrollTop = messages.scrollHeight;
 
   document.getElementById("userInput").value = "";
@@ -21,7 +20,6 @@ function sendMessage() {
       botMessage.textContent = response.text;
       messages.appendChild(botMessage);
 
-      // Rasm bo'lsa, uni qo'shish
       if (response.image) {
         const img = document.createElement("img");
         img.src = response.image;
@@ -38,7 +36,9 @@ function sendMessage() {
     }
 
     // Output malumot qo'shilganda avtomatik siljish
-    messages.scrollTop = messages.scrollHeight;
+    setTimeout(() => {
+      messages.scrollTop = messages.scrollHeight; // Bot xabaridan keyin pastga siljish
+    }, 1000); // Typing animatsiyasi tugagandan keyin siljiydi
   }, 1000);
 }
 
