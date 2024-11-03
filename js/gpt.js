@@ -4,43 +4,60 @@ function sendMessage() {
 
   const userMessage = document.createElement("div");
   userMessage.className = "message user";
-  userMessage.textContent = "Siz: " + userInput;
+  userMessage.textContent = userInput;
   messages.appendChild(userMessage);
-
-  const botMessage = document.createElement("div");
-  botMessage.className = "message bot";
-  botMessage.textContent = "Bot: Jabber berilyapti...";
-  messages.appendChild(botMessage);
 
   messages.scrollTop = messages.scrollHeight;
 
   document.getElementById("userInput").value = "";
 
-  const response = getInformation(userInput.toLowerCase());
+  setTimeout(() => {
+    const response = getInformation(userInput.toLowerCase());
+    const botMessage = document.createElement("div");
+    botMessage.className = "message bot";
 
-  if (response) {
-    botMessage.textContent = response.text;
-    if (response.image) {
-      const img = document.createElement("img");
-      img.src = response.image;
-      botMessage.appendChild(img);
+    if (response) {
+      botMessage.textContent = response.text;
+      messages.appendChild(botMessage);
+
+      if (response.image) {
+        const img = document.createElement("img");
+        img.src = response.image;
+        img.alt = "Rasm";
+        img.style.width = "100%"; // Rasmning kengligini 100% qilib qo'yamiz
+        botMessage.appendChild(img);
+      }
+
+      animateTyping(botMessage);
+    } else {
+      botMessage.textContent = "Kechirasiz, bu model haqida ma'lumotim yo'q.";
+      messages.appendChild(botMessage);
+      animateTyping(botMessage);
     }
-  } else {
-    botMessage.textContent =
-      "Bot: Kechirasiz, bu model haqida ma'lumotim yo'q.";
-  }
 
-  updateButtonState();
+    messages.scrollTop = messages.scrollHeight;
+  }, 1000);
 }
 
 function getInformation(input) {
   if (input.includes("iphone 16")) {
     return {
       text: "iPhone 16 - Apple tomonidan chiqarilgan eng yangi smartfon. Ushbu telefon yuqori darajadagi texnologiyalar, kuchli kameralar va ilg'or ishlash quvvatiga ega.",
-      image: "../images/16pro.webp",
     };
   }
   return null;
+}
+
+function animateTyping(element) {
+  const text = element.textContent;
+  element.textContent = "";
+  const typingSpeed = 10;
+
+  for (let i = 0; i < text.length; i++) {
+    setTimeout(() => {
+      element.textContent += text[i];
+    }, i * typingSpeed);
+  }
 }
 
 function updateButtonState() {
@@ -70,3 +87,8 @@ document
 document
   .getElementById("userInput")
   .addEventListener("input", updateButtonState);
+
+// Foydalanuvchi kiritganda input fokusda bo'lishi
+window.onload = function () {
+  document.getElementById("userInput").focus();
+};
