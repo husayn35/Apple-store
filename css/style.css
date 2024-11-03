@@ -390,6 +390,7 @@ main {
   flex-direction: column;
   justify-content: center;
   cursor: pointer;
+  margin-right: 15px;
 }
 
 .messages {
