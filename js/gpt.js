@@ -102,150 +102,74 @@ let iphoneXr =
 let iphoneX =
   "iPhone X - Taqdim etilgan yili: 2017, Displey: 5.8 dyuymli Super Retina OLED (1125 x 2436 piksel), Chip: A11 Bionic, Kamera: Dual 12 MP (keng burchak va telefoto); portret rejimi va optik zoom mavjud, Xavfsizlik: Face ID, Batareya: Simli va simsiz zaryadlash imkoniyati; tez zaryadlash qo'llab-quvvatlanadi, Qo'llab-quvvatlanadigan iOS versiyalari: iOS 11 dan iOS 17 gacha.";
 function getInformation(input) {
-  if (input.includes("iphone 16")) {
-    return {
-      text: iphone16,
-    };
-  }
-  if (input.includes("iphone 16 pro")) {
-    return {
-      text: iphone16Pro,
-    };
-  }
-  if (input.includes("iphone 16 pro max")) {
-    return {
-      text: iphone16ProMax,
-    };
-  }
-  if (input.includes("iphone 16 plus")) {
-    return {
-      text: iphone16Plus,
-    };
-  }
-  if (input.includes("iphone 15")) {
-    return {
-      text: iphone15,
-    };
-  }
-  if (input.includes("iphone 15 plus")) {
-    return {
-      text: iphone15Plus,
-    };
-  }
-  if (input.includes("iphone 15 pro")) {
-    return {
-      text: iphone15Pro,
-    };
-  }
-  if (input.includes("iphone 15 pro max")) {
-    return {
-      text: iphone15Max,
-    };
-  }
-  if (input.includes("iphone 14")) {
-    return {
-      text: iphone14,
-    };
-  }
-  if (input.includes("iphone 14 pro")) {
-    return {
-      text: iphone14Pro,
-    };
-  }
-  if (input.includes("iphone 14 pro max")) {
-    return {
-      text: iphone14ProMax,
-    };
-  }
-  if (input.includes("iphone 14 Plus")) {
-    return {
-      text: iphone14Plus,
-    };
-  }
+  switch (true) {
+    case input.includes("iphone 16 pro max"):
+      return { text: iphone16ProMax };
+    case input.includes("iphone 16 pro"):
+      return { text: iphone16Pro };
+    case input.includes("iphone 16 plus"):
+      return { text: iphone16Plus };
+    case input.includes("iphone 16"):
+      return { text: iphone16 };
 
-  if (input.includes("iphone 13")) {
-    return {
-      text: iphone13,
-    };
+    case input.includes("iphone 15 pro max"):
+      return { text: iphone15Max };
+    case input.includes("iphone 15 pro"):
+      return { text: iphone15Pro };
+    case input.includes("iphone 15 plus"):
+      return { text: iphone15Plus };
+    case input.includes("iphone 15"):
+      return { text: iphone15 };
+
+    case input.includes("iphone 14 pro max"):
+      return { text: iphone14ProMax };
+    case input.includes("iphone 14 pro"):
+      return { text: iphone14Pro };
+    case input.includes("iphone 14 plus"):
+      return { text: iphone14Plus };
+    case input.includes("iphone 14"):
+      return { text: iphone14 };
+
+    case input.includes("iphone 13 pro max"):
+      return { text: iphone13ProMax };
+    case input.includes("iphone 13 pro"):
+      return { text: iphone13Pro };
+    case input.includes("iphone 13 mini"):
+      return { text: iphone13Mini };
+    case input.includes("iphone 13"):
+      return { text: iphone13 };
+
+    case input.includes("iphone 12 pro max"):
+      return { text: iphone12ProMax };
+    case input.includes("iphone 12 pro"):
+      return { text: iphone12Pro };
+    case input.includes("iphone 12 mini"):
+      return { text: iphone12Mini };
+    case input.includes("iphone 12"):
+      return { text: iphone12 };
+
+    case input.includes("iphone 11 pro max"):
+      return { text: iphone11ProMax };
+    case input.includes("iphone 11 pro"):
+      return { text: iphone11Pro };
+    case input.includes("iphone 11"):
+      return { text: iphone11 };
+
+    case input.includes("iphone se"):
+      return { text: iphoneSe };
+    case input.includes("iphone x"):
+      return { text: iphoneX };
+    case input.includes("iphone xr"):
+      return { text: iphoneXr };
+    case input.includes("iphone xs max"):
+      return { text: iphoneXsMax };
+    case input.includes("iphone xs"):
+      return { text: iphoneXs };
+
+    default:
+      return null;
   }
-  if (input.includes("iphone 13 mini")) {
-    return {
-      text: iphone13Mini,
-    };
-  }
-  if (input.includes("iphone 13 pro")) {
-    return {
-      text: iphone13Pro,
-    };
-  }
-  if (input.includes("iphone 13 pro max")) {
-    return {
-      text: iphone13ProMax,
-    };
-  }
-  if (input.includes("iphone 12")) {
-    return {
-      text: iphone12,
-    };
-  }
-  if (input.includes("iphone 12 mini")) {
-    return {
-      text: iphone12Mini,
-    };
-  }
-  if (input.includes("iphone 12 pro")) {
-    return {
-      text: iphone12Pro,
-    };
-  }
-  if (input.includes("iphone 12 pro max")) {
-    return {
-      text: iphone12ProMax,
-    };
-  }
-  if (input.includes("iphone 11")) {
-    return {
-      text: iphone11,
-    };
-  }
-  if (input.includes("iphone 11 pro")) {
-    return {
-      text: iphone11Pro,
-    };
-  }
-  if (input.includes("iphone 11 pro max")) {
-    return {
-      text: iphone11ProMax,
-    };
-  }
-  if (input.includes("iphone Se")) {
-    return {
-      text: iphoneSe,
-    };
-  }
-  if (input.includes("iphone x")) {
-    return {
-      text: iphoneX,
-    };
-  }
-  if (input.includes("iphone xr")) {
-    return {
-      text: iphoneXr,
-    };
-  }
-  if (input.includes("iphone xs")) {
-    return {
-      text: iphoneXs,
-    };
-  }
-  if (input.includes("iphone xs max")) {
-    return {
-      text: iphoneXsMax,
-    };
-  }
-  return null;
 }
-
 function animateTyping(element) {
   const text = element.textContent;
   element.textContent = "";

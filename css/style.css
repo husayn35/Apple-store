@@ -139,23 +139,23 @@ header a img {
 #dark-mode::before {
   content: "";
   position: absolute;
-  width: 24px;
-  height: 24px;
+  width: 22px;
+  height: 22px;
   background-color: #000;
   border-radius: 50%;
-  top: 1px;
-  left: 2px;
+  top: 2.5px;
+  left: 2.5px;
   transition: all 0.3s;
 }
 
 #dark-mode:checked {
-  background-color: var(--color);
+  background-color: var(--bg-color);
   border-color: white;
 }
 
 #dark-mode:checked::before {
-  left: 30px;
-  background-color: var(--bg-color);
+  left: 56%;
+  background-color: var(--color);
 }
 
 .header-menu {
