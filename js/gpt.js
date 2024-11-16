@@ -99,7 +99,7 @@ let iphoneXs =
   "iPhone XS - Taqdim etilgan yili: 2018, Displey: 5.8 dyuymli Super Retina OLED (1125 x 2436 piksel), Chip: A12 Bionic, Kamera: Dual 12 MP (keng burchak va telefoto); portret rejimi va Smart HDR mavjud, Xavfsizlik: Face ID, Batareya: Tez zaryadlash va simsiz zaryadlash imkoniyatlari mavjud, Qo'llab-quvvatlanadigan iOS versiyalari: iOS 12 dan iOS 17 gacha.";
 let iphoneXr =
   "iPhone XR - Taqdim etilgan yili: 2018, Displey: 6.1 dyumlik Liquid Retina LCD (828 x 1792 piksel), Chip: A12 Bionic, Kamera: 12 MP (keng burchak); portret rejimi va Smart HDR mavjud, Xavfsizlik: Face ID, Batareya: Yuqori batareya ishlashiga ega; tez zaryadlash va simsiz zaryadlash imkoniyatlari mavjud, Qo'llab-quvvatlanadigan iOS versiyalari: iOS 12 dan iOS 17 gacha.";
-let iphoneX =
+let iphone10 =
   "iPhone X - Taqdim etilgan yili: 2017, Displey: 5.8 dyuymli Super Retina OLED (1125 x 2436 piksel), Chip: A11 Bionic, Kamera: Dual 12 MP (keng burchak va telefoto); portret rejimi va optik zoom mavjud, Xavfsizlik: Face ID, Batareya: Simli va simsiz zaryadlash imkoniyati; tez zaryadlash qo'llab-quvvatlanadi, Qo'llab-quvvatlanadigan iOS versiyalari: iOS 11 dan iOS 17 gacha.";
 function getInformation(input) {
   switch (true) {
@@ -158,8 +158,8 @@ function getInformation(input) {
     case input.includes("iphone se"):
       return { text: iphoneSe };
     case input.includes("iphone x"):
-      return { text: iphoneX };
-    case input.includes("iphone xr"):
+      return { text: iphone10 };
+    case input.includes.reverse("iphone xr"):
       return { text: iphoneXr };
     case input.includes("iphone xs max"):
       return { text: iphoneXsMax };
