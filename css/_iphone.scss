@@ -64,6 +64,7 @@ main {
     width: 250px;
     border-radius: 20px;
     box-shadow: 0 0 10px rgb(205, 205, 205);
+    transition: 0.3s;
     img {
       width: 250px;
       height: 300px;
@@ -105,5 +106,24 @@ main {
         }
       }
     }
+  }
+
+  .card-bottom {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    justify-content: space-between;
+  }
+  .buy {
+    background-color: rgb(21, 191, 16);
+    width: 70px;
+    text-align: center;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  .buy:active {
+    transform: scale(0.97);
   }
 }

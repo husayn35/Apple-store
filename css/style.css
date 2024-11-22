@@ -59,6 +59,19 @@ main {
   text-align: center;
 }
 
+.logo-main {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 80px;
+  font-weight: bold;
+  letter-spacing: 8px;
+  word-spacing: 5px;
+}
+
 header {
   position: fixed;
   top: 0;
@@ -268,6 +281,7 @@ main {
   width: 250px;
   border-radius: 20px;
   box-shadow: 0 0 10px rgb(205, 205, 205);
+  transition: 0.3s;
 }
 .iphone-cards .card img {
   width: 250px;
@@ -311,6 +325,24 @@ main {
 }
 .iphone-cards .card .card-body .colors .black {
   background-color: #444445;
+}
+.iphone-cards .card-bottom {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  justify-content: space-between;
+}
+.iphone-cards .buy {
+  background-color: rgb(21, 191, 16);
+  width: 70px;
+  text-align: center;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  margin-top: 10px;
+}
+.iphone-cards .buy:active {
+  transform: scale(0.97);
 }
 
 .spinner {
@@ -456,6 +488,9 @@ img {
   .gpt-message-input {
     width: 80%;
   }
+  .logo-main {
+    font-size: 50px;
+  }
 }
 @media screen and (max-width: 675px) {
   .hero {
@@ -480,5 +515,10 @@ img {
   }
   .send-message {
     width: 90%;
+  }
+  .logo-main {
+    font-size: 36px;
+    letter-spacing: 4px;
+    word-wrap: 2px;
   }
 }/*# sourceMappingURL=style.css.map */

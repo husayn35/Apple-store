@@ -66,6 +66,18 @@ main {
     // box-shadow: 0 0 20px;
   }
 }
+.logo-main {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 80px;
+  font-weight: bold;
+  letter-spacing: 8px;
+  word-spacing: 5px;
+}
 
 @import "header.scss";
 @import "iphone.scss";
@@ -103,6 +115,9 @@ main {
   .gpt-message-input {
     width: 80%;
   }
+  .logo-main {
+    font-size: 50px;
+  }
 }
 
 @media screen and (max-width: 675px) {
@@ -132,5 +147,10 @@ main {
   }
   .send-message {
     width: 90%;
+  }
+  .logo-main {
+    font-size: 36px;
+    letter-spacing: 4px;
+    word-wrap: 2px;
   }
 }
